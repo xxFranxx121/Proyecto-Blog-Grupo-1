@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Blog - Entrada</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="container">
+      <div class="nav-inner">
+        <a href="index.html" class="logo">Tech<span class="neon">Blog</span></a>
+        <input type="checkbox" id="menu-toggle">
+        <label for="menu-toggle" class="menu-icon">&#9776;</label>
+
+        <div class="nav-menu">
+          <nav class="nav-links">
+            <a href="index.html">Inicio</a>
+            <a href="blog.html" class="active">Blog</a>
+            <a href="gallery.html">Galería</a>
+            <a href="about.html">Acerca de</a>
+          </nav>
+          <div class="nav-actions">
+            <a href="#" class="btn btn-outline">Login</a>
+            <a href="#" class="btn btn-neon">Suscribirse</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </header>
+
+  <!-- Entrada -->
+  <main class="container" style="max-width:800px;">
+    <article>
+      <h1>Tecnología del Futuro</h1>
+      <p class="text-muted">Publicado el 29 de septiembre de 2025 por Francisco</p>
+      <img src="https://placehold.co/800x400/0f62fe/white?text=Tech" alt="Imagen de portada" class="featured">
+      <p>
+        La innovación tecnológica está cambiando el mundo a un ritmo sin precedentes. 
+        Desde inteligencia artificial hasta interfaces cerebro-computadora, 
+        el futuro promete transformar nuestras vidas en maneras que apenas comenzamos a imaginar.
+      </p>
+      <p>
+        Este artículo explora los avances más recientes y cómo impactarán en 
+        la educación, el trabajo y la sociedad en general.
+      </p>
+    </article>
+
+    <!-- Comentarios -->
+    <section class="comments">
+      <h2>Comentarios (5)</h2>
+
+      <form class="comment-form">
+        <input type="text" placeholder="Tu nombre" required>
+        <textarea placeholder="Escribe tu comentario..." rows="4" required></textarea>
+        <button type="submit" class="btn btn-primary">Publicar Comentario</button>
+      </form>
+
+      <div class="comment">
+        <strong>Ana</strong>
+        <p>Excelente artículo, me encantó cómo explicaste el tema.</p>
+      </div>
+      <div class="comment">
+        <strong>Carlos</strong>
+        <p>Me interesa mucho el impacto de la IA en la educación.</p>
+      </div>
+       <div class="comment">
+        <strong>Lucía</strong>
+        <p>Muy buen contenido, espero más entradas así.</p>
+      </div>
+      <div class="comment">
+        <strong>Marcos</strong>
+        <p>Creo que falta mencionar el tema de la ética en IA.</p>
+      </div>
+      <div class="comment">
+        <strong>Sofía</strong>
+        <p>La parte de interfaces cerebro-computadora me pareció fascinante.</p>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
