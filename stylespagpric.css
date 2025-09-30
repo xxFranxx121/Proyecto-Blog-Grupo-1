@@ -1,0 +1,148 @@
+body {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #e0e7ff; 
+}
+
+.custom-wrapper {
+    max-width: 1100px; 
+}
+
+header h1 {
+    font-size: 2.5rem; 
+}
+
+.carousel-img {
+    height: 70vh;
+    width: 100%;
+    object-fit: cover;
+}
+@media (max-width:576px) {
+    .carousel-img {
+        height: 250px;
+        object-fit: cover;
+    }
+}
+
+.custom-caption {
+    background: rgba(0,0,0,0.7); /* Hacemos el fondo más oscuro para que se lea mejor */
+    padding: 1rem;
+    border-radius: 10px;
+    /* Ajustes para el tema oscuro */
+    color: #fff; 
+}
+
+/* Imágenes de PREVIEW de las entradas */
+.card-entry-img {
+    height: 120px; /* Tamaño de preview más adecuado */
+    object-fit: cover;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+}
+
+/* =============================== */
+/* TARJETAS (ENTRADAS DE BLOG) */
+/* =============================== */
+.card {
+    background-color: #1f2937; /* Fondo oscuro de la tarjeta */
+    border: 1px solid #334155;
+    border-radius: 1rem;
+    color: #e0e7ff;
+    padding: 0.6rem;
+}
+.btn-sm {
+    padding: 0.25rem 0.75rem;
+    font-size: 0.85rem;
+}
+
+/* Comentarios con menos separación */
+.comment-item {
+    font-size: 0.9rem;
+    line-height: 1.3;
+}
+
+.avatar-placeholder {
+    width: 32px;
+    height: 32px;
+    font-size: 0.75rem;
+}
+
+.comment-content p {
+    margin-bottom: 0.2rem;
+}
+
+/* Botones (Aseguramos que se vean bien en el tema oscuro) */
+.btn-primary {
+    background-color: #0ea5e9;
+    border-color: #0ea5e9;
+}
+
+.btn-primary:hover {
+    background-color: #0284c7;
+    border-color: #0284c7;
+}
+
+.btn-outline-primary {
+    border-color: #0ea5e9;
+    color: #0ea5e9;
+}
+.btn-outline-primary:hover {
+    background-color: #0ea5e9;
+    color: #1f2937;
+}
+
+
+/* =============================== */
+/* PAGINACIÓN */
+/* =============================== */
+.pagination .page-item a {
+    /* Color del texto del link, debe ser claro para el fondo oscuro */
+    color: #e0e7ff; 
+    border-color: #334155; /* Borde oscuro para contraste */
+    background-color: #1f2937;
+    border-radius: 0; 
+    margin: 0 2px;
+}
+
+.pagination .page-item.active .page-link {
+    /* Estilo del botón activo */
+    background-color: #0ea5e9; 
+    border-color: #0ea5e9;
+    color: white;
+}
+
+
+/* =============================== */
+/* SIDEBAR Y CATEGORÍAS */
+/* =============================== */
+.list-group-item {
+    background-color: #1f2937;
+    border-color: #334155;
+    color: #e0e7ff;
+}
+
+/* Estilo para las CATEGORÍAS (los "botones" que simulan etiquetas) */
+.custom-category {
+    background-color: #0ea5e9 !important; /* Usamos el color primario para el tag */
+    border-color: #0ea5e9 !important;
+    color: white !important;
+    font-size: 0.8rem;
+    padding: 0.25rem 0.6rem;
+    border-radius: 10px; 
+    text-transform: uppercase;
+    font-weight: bold;
+    text-align: center;
+    line-height: 1;
+}
+
+/* =============================== */
+/* COMENTARIOS */
+/* =============================== */
+.avatar-placeholder {
+    width: 48px; 
+    height: 48px; 
+    font-size: 14px;
+}
+
+.comment-content p {
+    margin-bottom: 0.25rem; /* Hacemos el espaciado más compacto */
+}
