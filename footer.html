@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Footer Tecnología</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+    }
+
+    footer {
+      background: #0a0a0a;
+      color: white;
+      padding: 40px 20px;
+    }
+
+    .footer-container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .footer-col {
+      padding: 10px;
+    }
+
+    .footer-logo h2 {
+      color: #00bfff;
+      margin: 0;
+    }
+    .footer-logo p {
+      font-size: 14px;
+      color: #ccc;
+    }
+
+    .footer-social a {
+      margin-right: 10px;
+      display: inline-block;
+      text-decoration: none;
+      color: white;
+      font-size: 20px;
+      transition: color 0.3s;
+    }
+    .footer-social a:hover {
+      color: #00bfff;
+    }
+
+    .footer-info p {
+      font-size: 14px;
+      color: #ccc;
+    }
+
+    @media (max-width: 900px) {
+      .footer-container {
+        grid-template-columns: 1fr 1fr; /* 2 columnas */
+      }
+    }
+    @media (max-width: 600px) {
+      .footer-container {
+        grid-template-columns: 1fr; /* 1 columna */
+        text-align: center;
+      }
+      .footer-social a {
+        margin: 0 8px;
+      }
+    }
+  </style>
+</head>
+<body>
+  
+  <footer>
+    <div class="footer-container">
+      <div class="footer-col footer-logo">
+        <h2>TechWorld</h2>
+        <p>Innovación, desarrollo y noticias del mundo tecnológico.</p>
+      </div>
+      <div class="footer-col footer-social">
+        <h3>Síguenos</h3>
+        <a href="error 404">🌐</a>
+        <a href="error 404">🐦</a>
+        <a href="error 404">📘</a>
+        <a href="error 404">📸</a>
+      </div>
+
+      <!-- Columna 3: Información -->
+      <div class="footer-col footer-info">
+        <h3>Información</h3>
+        <p>Email: contacto@gmail.com</p>
+        <p>Tel: +54 381 584-1383</p>
+        <p>© Todos los derechos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
