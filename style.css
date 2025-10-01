@@ -16,6 +16,9 @@ body {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     background-color: var(--bg-dark);
     color: var(--text-light);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 .container, .custom-wrapper {
@@ -26,6 +29,7 @@ body {
 
 main {
     padding: 40px 0;
+    flex-grow: 1;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -53,6 +57,15 @@ h1, h2, h3, h4, h5, h6 {
     align-items: center;
     justify-content: space-between;
     height: 64px;
+    width: 100%;
+    max-width: 1100px;
+    padding: 0 16px;
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
 }
 
 .logo {
@@ -157,65 +170,102 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* =============================== */
-/* CARRUSEL Y PÁGINA BLOG (Antiguo pagprinc) */
+/* ESTILOS PARA PÁGINA DE LOGIN */
 /* =============================== */
-.carousel-img {
-    height: 50vh;
+.login-main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-box {
+  background-color: var(--bg-card);
+  padding: 2.5rem 2rem;
+  border-radius: 1rem;
+  border: 1px solid var(--border-color);
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+}
+
+.login-box h2 {
+  margin-bottom: 1.5rem;
+  color: var(--text-light);
+}
+
+.login-box form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.login-box input {
+  width: 100%;
+  padding: 0.75rem;
+  background-color: var(--bg-dark);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  color: var(--text-light);
+  font-size: 1rem;
+}
+
+.login-box input::placeholder {
+  color: var(--text-muted);
+}
+
+.login-box button {
+  padding: 0.75rem;
+  border: none;
+  border-radius: 8px;
+  background-color: var(--primary);
+  color: white;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.login-box button:hover {
+  background-color: var(--primary-hover);
+}
+
+.login-box #message {
+  margin-top: 1rem;
+  min-height: 1.5em; /* Evita que el layout salte */
+}
+
+
+/* =============================== */
+/* ESTILOS PARA LA GALERÍA */
+/* =============================== */
+.grid-gallery {
+    display: grid;
+    gap: 15px;
+    /* 1. Por defecto (dispositivo pequeño): una columna */
+    grid-template-columns: 1fr;
+}
+
+.grid-gallery img {
     width: 100%;
-    object-fit: cover;
-}
-@media (max-width:576px) { .carousel-img { height: 250px; } }
-
-.custom-caption {
-    background: rgba(0,0,0,0.7);
-    padding: 1rem;
-    border-radius: 10px;
+    height: 250px; /* Altura fija para que las filas se vean uniformes */
+    object-fit: cover; /* Recorta la imagen para que encaje sin deformarse */
+    border-radius: 8px;
 }
 
-/* =============================== */
-/* TARJETAS (ENTRADAS DE BLOG) */
-/* =============================== */
-.card {
-    background-color: var(--bg-card);
-    border: 1px solid var(--border-color);
-    border-radius: 1rem;
-    color: var(--text-light);
-    padding: 0.6rem;
-}
-.card-entry-img {
-    height: 120px;
-    object-fit: cover;
-    border-top-left-radius: 1rem;
-    border-top-right-radius: 1rem;
+/* 2. Dispositivo mediano: tres columnas */
+@media (min-width: 768px) {
+    .grid-gallery {
+        grid-template-columns: repeat(3, 1fr);
+    }
 }
 
-/* =============================== */
-/* PAGINACIÓN */
-/* =============================== */
-.pagination .page-item a {
-    color: var(--text-light);
-    border-color: var(--border-color);
-    background-color: var(--bg-card);
-    margin: 0 2px;
-}
-.pagination .page-item.active .page-link {
-    background-color: var(--primary);
-    border-color: var(--primary);
-    color: white;
+/* 3. Dispositivo grande: cuatro columnas */
+@media (min-width: 992px) {
+    .grid-gallery {
+        grid-template-columns: repeat(4, 1fr);
+    }
 }
 
-/* =============================== */
-/* SIDEBAR Y CATEGORÍAS */
-/* =============================== */
-.custom-category {
-    background-color: var(--primary) !important;
-    border-color: var(--primary) !important;
-    color: white !important;
-    font-size: 0.8rem;
-    padding: 0.25rem 0.6rem;
-    border-radius: 10px;
-    text-transform: uppercase;
-}
 
 /* =============================== */
 /* ESTILOS DEL FOOTER */
@@ -224,7 +274,7 @@ footer {
     background: #0a0a0a;
     color: white;
     padding: 40px 20px;
-    margin-top: 40px;
+    margin-top: auto; /* Empuja el footer hacia abajo */
 }
 .footer-container {
     display: grid;
@@ -252,67 +302,183 @@ footer {
     .footer-social a { margin: 0 8px; }
 }
 
+/* ... (conserva todos los estilos anteriores que te proporcioné) ... */
+
 /* =============================== */
-/* ESTILOS PARA PÁGINAS ADICIONALES (About, Gallery, etc.) */
+/* CARRUSEL Y PÁGINA BLOG */
 /* =============================== */
-.team {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: 20px;
-    margin-top: 40px;
+.carousel-img {
+    height: 50vh; /* Altura más balanceada */
+    width: 100%;
+    object-fit: cover;
 }
+@media (max-width:576px) { .carousel-img { height: 250px; } }
+
+.custom-caption {
+    background: rgba(0,0,0,0.7);
+    padding: 1rem;
+    border-radius: 10px;
+}
+
+/* =============================== */
+/* TARJETAS (ENTRADAS DE BLOG) */
+/* =============================== */
+.card {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 1rem;
+    color: var(--text-light);
+    padding: 0.6rem;
+}
+.card-entry-img {
+    height: 220px; /* Un poco más de altura para las imágenes de entrada */
+    object-fit: cover;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+}
+
+/* =============================== */
+/* PAGINACIÓN */
+/* =============================== */
+.pagination .page-item a {
+    color: var(--text-light);
+    border-color: var(--border-color);
+    background-color: var(--bg-card);
+    margin: 0 2px;
+}
+.pagination .page-item.active .page-link {
+    background-color: var(--primary);
+    border-color: var(--primary);
+    color: white;
+}
+.pagination .page-link:hover {
+    background-color: var(--border-color);
+}
+.pagination .page-item.disabled .page-link {
+    background-color: transparent;
+    border-color: var(--border-color);
+    color: var(--text-muted);
+}
+
+/* =============================== */
+/* SIDEBAR Y CATEGORÍAS */
+/* =============================== */
+.custom-category {
+    background-color: var(--primary) !important;
+    border-color: var(--primary) !important;
+    color: white !important;
+    font-size: 0.8rem;
+    padding: 0.25rem 0.6rem;
+    border-radius: 10px;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: background-color 0.2s;
+}
+
+.custom-category:hover {
+    background-color: var(--primary-hover) !important;
+}
+
+/* ... (aquí irían los demás estilos como el footer, etc.) ... */
+
+/* ... (conserva todos los estilos anteriores) ... */
+
+/* =============================== */
+/* SIDEBAR Y CATEGORÍAS */
+/* =============================== */
+/* Estilos para el Widget de Búsqueda */
+aside .input-group .form-control {
+    background-color: var(--bg-dark);
+    border-color: var(--border-color);
+    color: var(--text-light);
+}
+
+aside .input-group .form-control::placeholder {
+    color: var(--text-muted);
+}
+
+aside .input-group .form-control:focus {
+    background-color: var(--bg-dark);
+    border-color: var(--primary);
+    color: var(--text-light);
+    box-shadow: none;
+}
+
+aside .input-group .btn {
+    background-color: var(--primary);
+    border-color: var(--primary);
+    color: white;
+}
+
+aside .input-group .btn:hover {
+    background-color: var(--primary-hover);
+    border-color: var(--primary-hover);
+}
+
+.custom-category {
+    background-color: var(--primary) !important;
+    border-color: var(--primary) !important;
+    color: white !important;
+    font-size: 0.8rem;
+    padding: 0.25rem 0.6rem;
+    border-radius: 10px;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: background-color 0.2s;
+}
+
+.custom-category:hover {
+    background-color: var(--primary-hover) !important;
+}
+
+/* ... (aquí irían los demás estilos como el footer, etc.) ... */
+
+/* =============================== */
+/* PÁGINA "ACERCA DE" */
+/* =============================== */
 .team-member {
     text-align: center;
+    margin-bottom: 2rem;
 }
-.team-member img {
-    width: 120px;
-    height: 120px;
+
+.team-member .avatar {
+    /* --- VALORES MODIFICADOS --- */
+    width: 80px;   /* Antes era 150px */
+    height: 80px;  /* Antes era 150px */
+    /* --------------------------- */
     border-radius: 50%;
     object-fit: cover;
-    border: 3px solid var(--border-color);
+    margin-bottom: 1rem;
+    border: 3px solid var(--primary);
 }
-.grid-gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 15px;
-}
-.grid-gallery img {
-    width: 100%;
-    border-radius: 8px;
-}
-
-/* SOLUCIÓN PARA EL FOOTER Y HEADER */
-
-/* 1. Hace que el cuerpo de la página ocupe el 100% de la altura de la pantalla */
-body {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-}
-
-/* 2. Le dice al contenido principal que "crezca" para ocupar el espacio sobrante */
-main {
-  flex-grow: 1;
-}
-
 
 /* =============================== */
-/* AJUSTE FINAL PARA EL HEADER */
+/* ESTILOS ESPECÍFICOS PARA ENTRADA DE BLOG */
 /* =============================== */
 
-/* Hacemos que el contenedor interno de la barra de navegación sea flexible y ocupe todo el ancho */
-.navbar .container {
-  display: flex;
-  justify-content: center;
-  width: 100%;
+/* Estilos para el formulario de comentarios dentro del tema oscuro */
+.comment-form-container {
+    background-color: var(--bg-card) !important; /* Asegura que el fondo sea la tarjeta */
+    border: 1px solid var(--border-color);
 }
 
-/* Hacemos que la capa que contiene el logo y los links se estire */
-.nav-inner {
-  display: flex;
-  align-items: center;
-  justify-content: space-between; /* Esto empuja el logo a la izq. y los links a la der. */
-  width: 100%;
-  max-width: 1100px; /* Limitamos el ancho máximo para que coincida con tu contenido */
-  padding: 0 16px; /* Añadimos un poco de espacio en los bordes */
+.comment-form-container h3 {
+    color: var(--text-light);
+}
+
+.comment-form-container label {
+    color: var(--text-light) !important; /* Asegura que el label sea visible */
+    font-weight: 600;
+}
+
+.comment-form-container .form-control {
+    background-color: var(--bg-dark);
+    border-color: var(--border-color);
+    color: var(--text-light);
+}
+
+.comment-form-container .form-control:focus {
+    background-color: var(--bg-dark);
+    border-color: var(--primary);
+    box-shadow: 0 0 0 0.25rem rgba(14, 165, 233, 0.25); /* Sombra de enfoque de Bootstrap con color primario */
 }

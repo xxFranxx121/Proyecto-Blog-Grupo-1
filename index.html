@@ -3,86 +3,150 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>HOME</title>
+<title>Entrada de Blog: El Futuro de la IA</title>
 
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-
 <link rel="stylesheet" href="style.css">
 </head>
+<body>
+
 <header class="navbar">
   <div class="container">
     <div class="nav-inner">
       <a href="index.html" class="logo">Tech<span class="neon">Blog</span></a>
-
       <input type="checkbox" id="menu-toggle">
-      
       <label for="menu-toggle" class="menu-icon">&#9776;</label>
-
       <div class="nav-menu">
         <nav class="nav-links">
           <a href="index.html">Inicio</a>
           <a href="blog.html">Blog</a>
           <a href="gallery.html">Galería</a>
           <a href="about.html">Acerca de</a>
-        </nav>
-
+          <a href="contacto.html">Contacto</a> </nav>
         <div class="nav-actions">
           <a href="login.html" class="btn btn-outline">Login</a>
-          <a href="#" class="btn btn-neon">Suscribirse</a>
+          <a href="404.html" class="btn btn-neon">Suscribirse</a>
         </div>
       </div>
     </div>
   </div>
 </header>
-<body>
-  <!-- Hero -->
-  <main>
-    <section class="hero">
-        <div class="container">
-            <h1>Bienvenido a <span class="neon">TechBlog</span></h1>
-            <p class="text-muted">
-                Tu fuente de noticias, análisis y tendencias del mundo tecnológico.
-            </p>
-            <a href="#" class="btn btn-primary">Explorar Blog</a>
-        </div>
-    </section>
+<main>
+    <div class="container custom-wrapper">
+        <article class="py-5">
+            <header class="mb-4">
+                <span class="custom-category mb-2 d-inline-block">Inteligencia Artificial</span>
+                <h1 class="display-4 fw-bold">El Futuro Inminente: Cómo la IA Moldea la Próxima Década</h1>
+                <p class="text-muted">Publicado el 1 de Octubre de 2025 por **Alex Rivera**</p>
+                <hr>
+            </header>
 
-    <!-- Features -->
-    <section class="features container">
-        <div class="feature">
-            <h2>Noticias Actualizadas</h2>
-            <p>Entérate de los últimos avances en ciencia y tecnología.</p>
-        </div>
-        <div class="feature">
-            <h2>Análisis en Profundidad</h2>
-            <p>Opiniones de expertos sobre innovación y futuro digital.</p>
-        </div>
-        <div class="feature">
-            <h2>Comunidad Activa</h2>
-            <p>Comparte tus ideas y comentarios con otros apasionados.</p>
-        </div>
-    </section>
-  </main>
+            <figure class="mb-5">
+                <img src="imagenes\Imagen Inicio.jpg" class="img-fluid rounded-3" alt="El futuro de la Inteligencia Artificial" />
+                <figcaption class="text-center mt-2 text-muted">Representación visual de redes neuronales y el futuro tecnológico.</figcaption>
+            </figure>
+            
+            <section class="entry-content fs-5 mb-5">
+                <p>La **Inteligencia Artificial (IA)** no es una tecnología del mañana; es la fuerza impulsora que redefine nuestro presente. Desde la automatización de tareas hasta el diagnóstico médico asistido, la IA se ha incrustado profundamente en la infraestructura de la sociedad moderna. A medida que avanzamos, la convergencia de la IA con otras disciplinas como la computación cuántica promete un salto exponencial en capacidades y aplicaciones.</p>
+                
+                <h2>Automatización y el Mercado Laboral</h2>
+                <p>Uno de los debates más candentes es el impacto de la IA en el empleo. Si bien la automatización impulsada por la IA está desplazando ciertos roles repetitivos, también está creando una demanda sin precedentes de nuevos talentos especializados en su desarrollo, mantenimiento y ética. El futuro no está en competir *contra* la IA, sino en colaborar *con* ella.</p>
+                
+                <h2>Ética y Regulación</h2>
+                <p>El poder de la IA conlleva una gran responsabilidad. La preocupación por el sesgo algorítmico, la privacidad de los datos y la transparencia en la toma de decisiones ha impulsado la necesidad de marcos éticos y regulaciones robustas a nivel global. **La confianza pública en la IA dependerá directamente de nuestra capacidad para garantizar su uso justo y responsable.**</p>
+                
+                <p>En resumen, la próxima década será testigo de la maduración de la IA, transformándola de una herramienta novedosa a una infraestructura esencial. Es un viaje emocionante, lleno de desafíos técnicos y dilemas morales, pero con un potencial inigualable para mejorar la calidad de vida a escala mundial.</p>
+            </section>
+            
+            <hr>
+
+            <section id="comments-section" class="mt-5">
+                <h2>Comentarios</h2>
+                
+                <div class="comment-form-container bg-light p-4 rounded-3 mb-4">
+                    <h3>Deja tu comentario</h3>
+                    <form id="comment-form">
+                        <div class="mb-3">
+                            <label for="comment-name" class="form-label text-dark">Nombre</label>
+                            <input type="text" class="form-control" id="comment-name" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="comment-text" class="form-label text-dark">Comentario</label>
+                            <textarea class="form-control" id="comment-text" rows="4" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Enviar Comentario</button>
+                    </form>
+                </div>
+
+                <div id="comments-list" class="mt-4">
+                    <div class="card p-3 mb-3">
+                        <div class="d-flex align-items-center mb-2">
+                            <strong class="me-2 text-primary">Laura M.</strong> 
+                            <small class="text-muted">hace 3 días</small>
+                        </div>
+                        <p class="mb-0">Excelente análisis. Creo que el mayor desafío es la reeducación de la fuerza laboral para adaptarse a estos nuevos roles. ¡Gracias por compartir!</p>
+                    </div>
+
+                    <div class="card p-3 mb-3">
+                        <div class="d-flex align-items-center mb-2">
+                            <strong class="me-2 text-primary">Javier D.</strong> 
+                            <small class="text-muted">hace 1 día</small>
+                        </div>
+                        <p class="mb-0">Me preocupa un poco la parte ética. ¿Qué mecanismos existen para auditar los algoritmos y asegurar que no perpetúen sesgos sociales?</p>
+                    </div>
+
+                    <div class="card p-3 mb-3">
+                        <div class="d-flex align-items-center mb-2">
+                            <strong class="me-2 text-primary">Sofia R.</strong> 
+                            <small class="text-muted">hace 8 horas</small>
+                        </div>
+                        <p class="mb-0">¡Muy interesante! Me encantaría que TechBlog cubriera más sobre el impacto de la IA en la música y el arte. Es una revolución silenciosa.</p>
+                    </div>
+                    
+                    <div class="card p-3 mb-3">
+                        <div class="d-flex align-items-center mb-2">
+                            <strong class="me-2 text-primary">Pedro C.</strong> 
+                            <small class="text-muted">hace 5 minutos</small>
+                        </div>
+                        <p class="mb-0">El tema de la computación cuántica junto a la IA es realmente fascinante. ¿Creen que veremos una superinteligencia en esta década?</p>
+                    </div>
+
+                    <div class="card p-3 mb-3">
+                        <div class="d-flex align-items-center mb-2">
+                            <strong class="me-2 text-primary">Ana V.</strong> 
+                            <small class="text-muted">hace 2 semanas</small>
+                        </div>
+                        <p class="mb-0">Concuerdo con que la colaboración es clave. La IA como copiloto, no como reemplazo. Buen punto.</p>
+                    </div>
+                </div>
+                
+            </section>
+
+        </article>
+    </div>
+</main>
+
 <footer>
-  <div class="footer-container">
-    <div class="footer-col footer-logo">
-      <h2>TechWorld</h2>
-      <p>Innovación, desarrollo y noticias del mundo tecnológico.</p>
+    <div class="footer-container">
+      <div class="footer-col footer-logo">
+        <h2>TechBlog</h2>
+        <p>Innovación, desarrollo y noticias del mundo tecnológico.</p>
+      </div>
+      <div class="footer-col footer-social">
+        <h3>Síguenos</h3>
+        <a href="404.html">🌐</a>
+        <a href="404.html">🐦</a>
+        <a href="404.html">📘</a>
+        <a href="404.html">📸</a>
+      </div>
+      <div class="footer-col footer-info">
+        <h3>Información</h3>
+        <p>Email: contacto@gmail.com</p>
+        <p>Tel: +54 381 584-1383</p>
+        <p>© Todos los derechos reservados.</p>
+      </div>
     </div>
-    <div class="footer-col footer-social">
-      <h3>Síguenos</h3>
-      <a href="#">🌐</a>
-      <a href="#">🐦</a>
-      <a href="#">📘</a>
-      <a href="#">📸</a>
-    </div>
-    <div class="footer-col footer-info">
-      <h3>Información</h3>
-      <p>Email: contacto@gmail.com</p>
-      <p>Tel: +54 381 584-1383</p>
-      <p>© Todos los derechos reservados.</p>
-    </div>
-  </div>
-</footer>
+  </footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
