@@ -41,13 +41,13 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* =============================== */
-/* NAVBAR (Cabecera de index.html adaptada) */
+/* NAVBAR */
 /* =============================== */
 .navbar {
     position: sticky;
     top: 0;
     z-index: 50;
-    background: rgba(31, 41, 55, 0.9); /* Fondo oscuro semitransparente */
+    background: rgba(31, 41, 55, 0.9); 
     backdrop-filter: blur(8px);
     border-bottom: 1px solid var(--border-color);
 }
@@ -241,14 +241,13 @@ h1, h2, h3, h4, h5, h6 {
 .grid-gallery {
     display: grid;
     gap: 15px;
-    /* 1. Por defecto (dispositivo pequeño): una columna */
     grid-template-columns: 1fr;
 }
 
 .grid-gallery img {
     width: 100%;
-    height: 250px; /* Altura fija para que las filas se vean uniformes */
-    object-fit: cover; /* Recorta la imagen para que encaje sin deformarse */
+    height: 250px; 
+    object-fit: cover; 
     border-radius: 8px;
 }
 
@@ -274,7 +273,7 @@ footer {
     background: #0a0a0a;
     color: white;
     padding: 40px 20px;
-    margin-top: auto; /* Empuja el footer hacia abajo */
+    margin-top: auto; 
 }
 .footer-container {
     display: grid;
@@ -302,13 +301,12 @@ footer {
     .footer-social a { margin: 0 8px; }
 }
 
-/* ... (conserva todos los estilos anteriores que te proporcioné) ... */
 
 /* =============================== */
 /* CARRUSEL Y PÁGINA BLOG */
 /* =============================== */
 .carousel-img {
-    height: 50vh; /* Altura más balanceada */
+    height: 50vh; 
     width: 100%;
     object-fit: cover;
 }
@@ -331,7 +329,7 @@ footer {
     padding: 0.6rem;
 }
 .card-entry-img {
-    height: 220px; /* Un poco más de altura para las imágenes de entrada */
+    height: 220px; 
     object-fit: cover;
     border-top-left-radius: 1rem;
     border-top-right-radius: 1rem;
@@ -378,10 +376,6 @@ footer {
 .custom-category:hover {
     background-color: var(--primary-hover) !important;
 }
-
-/* ... (aquí irían los demás estilos como el footer, etc.) ... */
-
-/* ... (conserva todos los estilos anteriores) ... */
 
 /* =============================== */
 /* SIDEBAR Y CATEGORÍAS */
@@ -431,11 +425,10 @@ aside .input-group .btn:hover {
     background-color: var(--primary-hover) !important;
 }
 
-/* ... (aquí irían los demás estilos como el footer, etc.) ... */
 
-/* =============================== */
+
 /* PÁGINA "ACERCA DE" */
-/* =============================== */
+
 .team-member {
     text-align: center;
     margin-bottom: 2rem;
@@ -443,22 +436,20 @@ aside .input-group .btn:hover {
 
 .team-member .avatar {
     /* --- VALORES MODIFICADOS --- */
-    width: 80px;   /* Antes era 150px */
-    height: 80px;  /* Antes era 150px */
-    /* --------------------------- */
+    width: 80px;  
+    height: 80px;  
     border-radius: 50%;
     object-fit: cover;
     margin-bottom: 1rem;
     border: 3px solid var(--primary);
 }
 
-/* =============================== */
+
 /* ESTILOS ESPECÍFICOS PARA ENTRADA DE BLOG */
-/* =============================== */
 
 /* Estilos para el formulario de comentarios dentro del tema oscuro */
 .comment-form-container {
-    background-color: var(--bg-card) !important; /* Asegura que el fondo sea la tarjeta */
+    background-color: var(--bg-card) !important; 
     border: 1px solid var(--border-color);
 }
 
@@ -467,7 +458,7 @@ aside .input-group .btn:hover {
 }
 
 .comment-form-container label {
-    color: var(--text-light) !important; /* Asegura que el label sea visible */
+    color: var(--text-light) !important; 
     font-weight: 600;
 }
 
@@ -480,5 +471,5 @@ aside .input-group .btn:hover {
 .comment-form-container .form-control:focus {
     background-color: var(--bg-dark);
     border-color: var(--primary);
-    box-shadow: 0 0 0 0.25rem rgba(14, 165, 233, 0.25); /* Sombra de enfoque de Bootstrap con color primario */
+    box-shadow: 0 0 0 0.25rem rgba(14, 165, 233, 0.25); 
 }
